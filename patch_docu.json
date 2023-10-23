@@ -1,0 +1,38 @@
+{
+	"scene": {
+		"osc": {
+			"type": [
+				"Classic",
+				"Sine",
+				"Wavetable",
+				"S&H Noise",
+				"Audio In",
+				"FM3",
+				"FM2",
+				"Window",
+				"Modern",
+				"String",
+				"Twist",
+				"Alias"
+			],
+			"pitch",
+			"octave",
+			"keytrack",
+			"retrigger",
+			"p": {
+				"Classic": [],
+				"Sine": [],
+				"Wavetable": [],
+				"S&H Noise": [],
+				"Audio In": [],
+				"FM3": [],
+				"FM2": [],
+				"Window": [],
+				"Modern": [],
+				"String": [],
+				"Twist": [],
+				"Alias": []
+			}
+		}
+	}
+}
