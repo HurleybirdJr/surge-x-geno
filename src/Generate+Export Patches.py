@@ -32,8 +32,8 @@ SURGE_INST = surgepy.createSurge(SAMPLE_RATE)
 # Set param values
 patch = SURGE_INST.getPatch()
 SURGE_INST.setParamVal(patch["scene"][0]["osc"][0]["type"], 8)
-SURGE_INST.savePatch(path="patches/text.fxp")
-SURGE_INST.loadPatch(path="patches/text.fxp")
+SURGE_INST.savePatch(path="../patches/text.fxp")
+SURGE_INST.loadPatch(path="../patches/text.fxp")
 # SURGE_INST.setParamVal(patch["scene"][0]["osc"][0]["p"][2], 1)
 
 osc_type: surgepy.SurgeNamedParamId = patch["scene"][0]["osc"][0]["type"]

@@ -35,7 +35,7 @@ def refresh_patch(surge_inst: surgepy.SurgeSynthesizer, path: str):
 SURGE_INST = surgepy.createSurge(48000)
 patch = SURGE_INST.getPatch()
 # SURGE_INST.setParamVal(patch["scene"][0]["osc"][0]["type"], 8)
-refresh_patch(SURGE_INST, "patches/text.fxp")
+refresh_patch(SURGE_INST, "../patches/text.fxp")
 
 osc_type: surgepy.SurgeNamedParamId = patch["scene"][0]["osc"][0]["type"]
 osc_param_1 = patch["scene"][0]["osc"][0]
