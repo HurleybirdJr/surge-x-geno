@@ -1,10 +1,18 @@
 import surgepy
-import sys
 import wave
-import os
 import random
 import multiprocessing
 from tqdm.auto import tqdm
+
+'''
+This code will hopefully both generate and export .wav
+    and linked metadata files of various SurgeXT patch 
+    parameter values and their outputs for the AI model 
+    to learn from to hopefully replicate as closely as 
+    possible based off of what SurgeXT can currently do.
+    
+    That's the plan anyways... (:
+'''
 
 
 def param_values(surge_inst, param):
@@ -32,8 +40,8 @@ SURGE_INST = surgepy.createSurge(SAMPLE_RATE)
 # Set param values
 patch = SURGE_INST.getPatch()
 SURGE_INST.setParamVal(patch["scene"][0]["osc"][0]["type"], 8)
-SURGE_INST.savePatch(path="../patches/text.fxp")
-SURGE_INST.loadPatch(path="../patches/text.fxp")
+SURGE_INST.savePatch(path="../patches/temp.fxp")
+SURGE_INST.loadPatch(path="../patches/temp.fxp")
 # SURGE_INST.setParamVal(patch["scene"][0]["osc"][0]["p"][2], 1)
 
 osc_type: surgepy.SurgeNamedParamId = patch["scene"][0]["osc"][0]["type"]
@@ -71,7 +79,7 @@ def render(nhv):
 
 
 def generate_patch_note_hold_and_velocity():
-    for i in range(MAX_PATCHES):
+    for count in range(MAX_PATCHES):
         for note in range(NOTE_RANGE[0], NOTE_RANGE[1]):
             hold = 1
             velocity = random.randint(1, MAX_VELOCITY)
