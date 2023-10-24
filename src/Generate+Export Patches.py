@@ -33,11 +33,11 @@ SAMPLE_RATE = 48000
 # Typical piano note range
 NOTE_RANGE = [21, 108]
 DURATION = 4  # seconds
-MAX_VELOCITY = 127
+MAX_VELOCITY = 100  # MIDI velocity
 
-SURGE_INST = surgepy.createSurge(SAMPLE_RATE)
+SURGE_INST = surgepy.createSurge(SAMPLE_RATE)  # Initialises SurgeXT instance
 
-# Set param values
+# Set parameter values
 patch = SURGE_INST.getPatch()
 SURGE_INST.setParamVal(patch["scene"][0]["osc"][0]["type"], 8)
 SURGE_INST.savePatch(path="../patches/temp.fxp")
@@ -52,20 +52,21 @@ for i in range(0, 7):
     print(param_values(SURGE_INST, osc_params))
 
 
+#  Export and render .wav files
 def render(nhv):
     note, hold, velocity = nhv
 
-    onesec = SURGE_INST.getSampleRate() / SURGE_INST.getBlockSize()
-    buffer = SURGE_INST.createMultiBlock(int(round(DURATION * onesec)))
+    one_sec = SURGE_INST.getSampleRate() / SURGE_INST.getBlockSize()
+    buffer = SURGE_INST.createMultiBlock(int(round(DURATION * one_sec)))
 
     chd = [note]
     for note in chd:
         SURGE_INST.playNote(0, note, velocity, 0)
-    SURGE_INST.processMultiBlock(buffer, 0, int(round(hold * onesec)))
+    SURGE_INST.processMultiBlock(buffer, 0, int(round(hold * one_sec)))
 
     for note in chd:
         SURGE_INST.releaseNote(0, note, 0)
-    SURGE_INST.processMultiBlock(buffer, int(round((DURATION - hold) * onesec)))
+    SURGE_INST.processMultiBlock(buffer, int(round((DURATION - hold) * one_sec)))
 
     # slug, buf.T, int(round(SURGE_INST.getSampleRate())))
 
@@ -78,6 +79,7 @@ def render(nhv):
         file.writeframes(buffer.tobytes())
 
 
+#  Creates MIDI notes to play with current SurgeXT patch
 def generate_patch_note_hold_and_velocity():
     for count in range(MAX_PATCHES):
         for note in range(NOTE_RANGE[0], NOTE_RANGE[1]):
@@ -86,6 +88,7 @@ def generate_patch_note_hold_and_velocity():
             yield note, hold, velocity
 
 
+# Multithread processing - YIPPEE! (probably could be done differently IDK?)
 core_num = multiprocessing.cpu_count()
 print(f"{core_num} cores")
 

@@ -16,8 +16,9 @@ The main reasons I'm doing this is:
 '''
 
 
+#  Formats values for printing a SurgeXT osc in a given scene
 def osc_param_values(surge_inst: surgepy.SurgeSynthesizer, current_patch: dict, osc_num: int):
-    # Prints all osc parameters before "p" slider values
+    # Prints all osc parameter values before "p" parameter sliders (see docs)
     print(param_values(surge_inst, current_patch["scene"][0]["osc"][osc_num]["type"]),
           param_values(surge_inst, current_patch["scene"][0]["osc"][osc_num]["pitch"]),
           param_values(surge_inst, current_patch["scene"][0]["osc"][osc_num]["octave"]),
@@ -25,11 +26,12 @@ def osc_param_values(surge_inst: surgepy.SurgeSynthesizer, current_patch: dict, 
           param_values(surge_inst, current_patch["scene"][0]["osc"][osc_num]["retrigger"]),
           sep='\n'
           )
-    for i in range(0, 7):  # Print all "p" parameters and values derived from osc type
+    for i in range(0, 7):  # Print all "p" parameters (see docs) and values of them derived from osc type
         osc_params = current_patch["scene"][0]["osc"][osc_num]["p"][i]
         print(param_values(surge_inst, osc_params))
 
 
+#  Formats parameter values into an array for printing
 def param_values(surge_inst: surgepy.SurgeSynthesizer, param: surgepy.SurgeNamedParamId):
     return [
         surge_inst.getParameterName(param.getId()),
@@ -42,12 +44,13 @@ def param_values(surge_inst: surgepy.SurgeSynthesizer, param: surgepy.SurgeNamed
     ]
 
 
+#  Refreshes current patch data - parameter values won't update unless I do this shiz :/
 def refresh_patch(surge_inst: surgepy.SurgeSynthesizer, path: str):
     surge_inst.savePatch(path=path)
     surge_inst.loadPatch(path=path)
 
 
-SURGE_INST = surgepy.createSurge(48000)
+SURGE_INST = surgepy.createSurge(48000)  # Creates SurgeXT instance :)
 patch = SURGE_INST.getPatch()
 # SURGE_INST.setParamVal(patch["scene"][0]["osc"][0]["type"], 8)
 refresh_patch(SURGE_INST, "../patches/temp.fxp")
