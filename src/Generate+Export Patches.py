@@ -32,7 +32,7 @@ SAMPLE_RATE = 48000
 
 # Typical piano note range
 NOTE_RANGE = [21, 108]
-DURATION = 2  # seconds
+DURATION = 1  # seconds
 MAX_VELOCITY = 100  # MIDI velocity
 
 SURGE_INST = surgepy.createSurge(SAMPLE_RATE)  # Initialises SurgeXT instance
@@ -49,7 +49,7 @@ SURGE_INST.setParamVal(patch["scene"][0]["osc"][0]["p"][2], 0.0)
 SURGE_INST.setParamVal(patch["scene"][0]["osc"][0]["p"][3], 0.5)
 
 # SURGE_INST.savePatch(path="../patches/temp.fxp")
-SURGE_INST.loadPatch(path="../patches/Sine.fxp")
+SURGE_INST.loadPatch(path="../patches/Sine Fall 1 Sec.fxp")
 # SURGE_INST.setParamVal(patch["scene"][0]["osc"][0]["p"][2], 1)
 
 osc_type: surgepy.SurgeNamedParamId = patch["scene"][0]["osc"][0]["type"]
@@ -69,7 +69,7 @@ print(int(round((DURATION - 1) * (SURGE_INST.getSampleRate() / SURGE_INST.getBlo
 def render(nhv):
     note, hold, velocity = nhv
 
-    one_sec = SURGE_INST.getSampleRate() / SURGE_INST.getBlockSize() * 2
+    one_sec = 2 * SURGE_INST.getSampleRate() / SURGE_INST.getBlockSize()
     buffer = SURGE_INST.createMultiBlock(int(round(DURATION * one_sec)))
 
     chd = [note]
@@ -85,11 +85,11 @@ def render(nhv):
 
     buffer = (buffer * (2 ** 15 - 1)).astype("<h")  # Convert to little-endian 16 bit int.
     # WHY? float round
-    with wave.open("../output/note%d_velocity%d_hold%f.wav" % (note, velocity, hold), "w") as file:
-        file.setnchannels(2)  # 2 channels
+    with wave.open("../output/note%d_velocity%d_hold%f.wav" % (note, velocity, DURATION), "w") as file:
+        file.setnchannels(1)  # 2 channels
         file.setsampwidth(2)
         file.setframerate(SAMPLE_RATE)
-        file.writeframes(buffer.tobytes())
+        file.writeframes(buffer[0].tobytes())
 
 
 #  Creates MIDI notes to play with current SurgeXT patch
@@ -102,8 +102,9 @@ def generate_patch_note_hold_and_velocity():
 
 
 # Multithread processing - YIPPEE! (probably could be done differently IDK?)
-core_num = multiprocessing.cpu_count()
-print(f"{core_num} cores")
+# core_num = multiprocessing.cpu_count()
+# print(f"{core_num} cores")
 
-process_pool = multiprocessing.Pool(core_num // 2)
-r = list(tqdm(process_pool.imap(render, generate_patch_note_hold_and_velocity()), total=MAX_PATCHES))
+# process_pool = multiprocessing.Pool(core_num // 2)
+# r = list(tqdm(process_pool.imap(render, generate_patch_note_hold_and_velocity()), total=MAX_PATCHES))
+render([40, DURATION / 2, 100])
