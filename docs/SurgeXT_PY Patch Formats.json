@@ -15,12 +15,62 @@
 				"Twist",
 				"Alias"
 			],
-			"pitch",
-			"octave",
-			"keytrack",
-			"retrigger",
+			"pitch": [
+				"A Osc 1 Pitch",
+				-7.0,
+				7.0,
+				0.0,
+				"float",
+				"0.00 semitones"
+			],
+			"octave": [
+				"A Osc 1 Octave",
+				-3.0,
+				3.0,
+				0.0,
+				"int",
+				"0"
+			],
+			"keytrack": [
+				"A Osc 1 Keytrack",
+				0.0,
+				1.0,
+				1.0,
+				"bool",
+				"On"
+			],
+			"retrigger": [
+				"A Osc 1 Retrigger",
+				0.0,
+				1.0,
+				0.0,
+				"bool",
+				"Off"
+			],
 			"p": {
-				"Classic": [],
+				"Classic": [
+					[
+						"A Osc 1 Shape", -1.0, 1.0, 0.0, "float", "0.00 %"
+					],
+					[
+						"A Osc 1 Width 1", 0.0, 1.0, 0.5, "float", "50.00 %"
+					],
+					[
+						"A Osc 1 Width 2", 0.0, 1.0, 0.5, "float", "50.00 %"
+					],
+					[
+						"A Osc 1 Sub Mix", 0.0, 1.0, 0.0, "float", "0.00 %"
+					],
+					[
+						"A Osc 1 Sync", 0.0, 60.0, 0.0, "float", "0.00 semitones"
+					],
+					[
+						"A Osc 1 Unison Detune", 0.0, 1.0, 0.10000000149011612, "float", "10.00 cents"
+					],
+					[
+						"A Osc 1 Unison Voices", 1.0, 16.0, 1.0, "int", "1 voice"
+					]
+				],
 				"Sine": [],
 				"Wavetable": [],
 				"S&H Noise": [],
@@ -28,7 +78,15 @@
 				"FM3": [],
 				"FM2": [],
 				"Window": [],
-				"Modern": [],
+				"Modern": [
+					["A Osc 1 Sawtooth", 0.0, -1.0, 1.0, 0.0, "float", "0.000000 %"],
+					["A Osc 1 Pulse", 0.5, -1.0, 1.0, 0.0, "float", "50.000000 %"],
+					["A Osc 1 Triangle", 0.5, -1.0, 1.0, 0.0, "float", "50.000000 %"],
+					["A Osc 1 Width", 0.0, 0.0, 1.0, 0.5, "float", "0.000000 %"],
+					["A Osc 1 Sync", 0.0, 0.0, 60.0, 0.0, "float", "0.000000 semitones"],
+					["A Osc 1 Unison Detune", 0.10000000149011612, 0.0, 1.0, 0.10000000149011612, "float", "10.000000 cents"],
+					["A Osc 1 Unison Voices", 1.0, 1.0, 16.0, 1.0, "int", "1 voice"]
+				],
 				"String": [],
 				"Twist": [],
 				"Alias": []

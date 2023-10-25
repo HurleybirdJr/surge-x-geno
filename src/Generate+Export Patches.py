@@ -32,16 +32,24 @@ SAMPLE_RATE = 48000
 
 # Typical piano note range
 NOTE_RANGE = [21, 108]
-DURATION = 4  # seconds
+DURATION = 2  # seconds
 MAX_VELOCITY = 100  # MIDI velocity
 
 SURGE_INST = surgepy.createSurge(SAMPLE_RATE)  # Initialises SurgeXT instance
 
 # Set parameter values
 patch = SURGE_INST.getPatch()
-SURGE_INST.setParamVal(patch["scene"][0]["osc"][0]["type"], 8)
-SURGE_INST.savePatch(path="../patches/temp.fxp")
-SURGE_INST.loadPatch(path="../patches/temp.fxp")
+
+# PATCH SETUP HERE
+
+SURGE_INST.setParamVal(patch["scene"][0]["osc"][0]["type"], 8)  # Set OSC Type HERE!!
+SURGE_INST.setParamVal(patch["scene"][0]["osc"][0]["p"][0], 1.0)
+SURGE_INST.setParamVal(patch["scene"][0]["osc"][0]["p"][1], 0.0)
+SURGE_INST.setParamVal(patch["scene"][0]["osc"][0]["p"][2], 0.0)
+SURGE_INST.setParamVal(patch["scene"][0]["osc"][0]["p"][3], 0.5)
+
+# SURGE_INST.savePatch(path="../patches/temp.fxp")
+SURGE_INST.loadPatch(path="../patches/Sine.fxp")
 # SURGE_INST.setParamVal(patch["scene"][0]["osc"][0]["p"][2], 1)
 
 osc_type: surgepy.SurgeNamedParamId = patch["scene"][0]["osc"][0]["type"]
@@ -51,18 +59,23 @@ for i in range(0, 7):
     osc_params = patch["scene"][0]["osc"][0]["p"][i]
     print(param_values(SURGE_INST, osc_params))
 
+print(f"sample rate: {SURGE_INST.getSampleRate()}, block size: {SURGE_INST.getBlockSize()}")
+print(f"one_sec: {(SURGE_INST.getSampleRate() / SURGE_INST.getBlockSize())} ")
+print(f"buffer: {SURGE_INST.createMultiBlock(int(round(DURATION * (SURGE_INST.getSampleRate() / SURGE_INST.getBlockSize()))))}")
+print(int(round((DURATION - 1) * (SURGE_INST.getSampleRate() / SURGE_INST.getBlockSize()))))
+
 
 #  Export and render .wav files
 def render(nhv):
     note, hold, velocity = nhv
 
-    one_sec = SURGE_INST.getSampleRate() / SURGE_INST.getBlockSize()
+    one_sec = SURGE_INST.getSampleRate() / SURGE_INST.getBlockSize() * 2
     buffer = SURGE_INST.createMultiBlock(int(round(DURATION * one_sec)))
 
     chd = [note]
     for note in chd:
         SURGE_INST.playNote(0, note, velocity, 0)
-    SURGE_INST.processMultiBlock(buffer, 0, int(round(hold * one_sec)))
+    SURGE_INST.processMultiBlock(buffer, 0, int(round(DURATION * one_sec)))
 
     for note in chd:
         SURGE_INST.releaseNote(0, note, 0)
@@ -72,7 +85,7 @@ def render(nhv):
 
     buffer = (buffer * (2 ** 15 - 1)).astype("<h")  # Convert to little-endian 16 bit int.
     # WHY? float round
-    with wave.open("output/note%d_velocity%d_hold%f.wav" % (note, velocity, hold), "w") as file:
+    with wave.open("../output/note%d_velocity%d_hold%f.wav" % (note, velocity, hold), "w") as file:
         file.setnchannels(2)  # 2 channels
         file.setsampwidth(2)
         file.setframerate(SAMPLE_RATE)

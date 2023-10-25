@@ -1,4 +1,5 @@
 import surgepy
+import surgepy.constants as srco
 '''
 This code generates an output from
     the initial/modified default SurgeXT patch
@@ -34,13 +35,13 @@ def osc_param_values(surge_inst: surgepy.SurgeSynthesizer, current_patch: dict, 
 #  Formats parameter values into an array for printing
 def param_values(surge_inst: surgepy.SurgeSynthesizer, param: surgepy.SurgeNamedParamId):
     return [
-        surge_inst.getParameterName(param.getId()),
-        surge_inst.getParamVal(param),
-        surge_inst.getParamMin(param),
-        surge_inst.getParamMax(param),
-        surge_inst.getParamDef(param),
-        surge_inst.getParamValType(param),
-        surge_inst.getParamDisplay(param)
+        surge_inst.getParameterName(param.getId()),  # Parameter Internal Name
+        surge_inst.getParamVal(param),               # Parameter Current Value
+        surge_inst.getParamMin(param),               # Parameter MINIMUM Value
+        surge_inst.getParamMax(param),               # Parameter MAXIMUM> Value
+        surge_inst.getParamDef(param),               # Parameter Current Value
+        surge_inst.getParamValType(param),           # Parameter Current Value
+        surge_inst.getParamDisplay(param)            # Parameter Current Value
     ]
 
 
@@ -52,8 +53,16 @@ def refresh_patch(surge_inst: surgepy.SurgeSynthesizer, path: str):
 
 SURGE_INST = surgepy.createSurge(48000)  # Creates SurgeXT instance :)
 patch = SURGE_INST.getPatch()
-# SURGE_INST.setParamVal(patch["scene"][0]["osc"][0]["type"], 8)
-refresh_patch(SURGE_INST, "../patches/temp.fxp")
+
+# PATCH SETUP HERE
+SURGE_INST.setParamVal(patch["scene"][0]["osc"][0]["type"], 8)  # Set OSC Type HERE!!
+SURGE_INST.setParamVal(patch["scene"][0]["osc"][0]["p"][0], 1.0)
+SURGE_INST.setParamVal(patch["scene"][0]["osc"][0]["p"][1], 0.0)
+SURGE_INST.setParamVal(patch["scene"][0]["osc"][0]["p"][2], 0.0)
+SURGE_INST.setParamVal(patch["scene"][0]["osc"][0]["p"][3], 0.5)
+
+refresh_patch(SURGE_INST, "../patches/analyser_test.fxp")
+
 
 osc_type: surgepy.SurgeNamedParamId = patch["scene"][0]["osc"][0]["type"]
 osc_param_1 = patch["scene"][0]["osc"][0]

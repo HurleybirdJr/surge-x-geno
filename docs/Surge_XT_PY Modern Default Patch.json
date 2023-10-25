@@ -1,0 +1,2508 @@
+{
+	'scene': [
+		{
+			'osc': [
+				{
+					'type': <SurgeNamedParam
+					'A Osc 1 Type'
+					>,
+					'pitch': <SurgeNamedParam
+					'A Osc 1 Pitch'
+					>,
+					'octave': <SurgeNamedParam
+					'A Osc 1 Octave'
+					>,
+					'keytrack': <SurgeNamedParam
+					'A Osc 1 Keytrack'
+					>,
+					'retrigger': <SurgeNamedParam
+					'A Osc 1 Retrigger'
+					>,
+					'p': [
+						<SurgeNamedParam
+						'A Osc 1 Sawtooth'
+						>,
+						<SurgeNamedParam
+						'A Osc 1 Pulse'
+						>,
+						<SurgeNamedParam
+						'A Osc 1 Triangle'
+						>,
+						<SurgeNamedParam
+						'A Osc 1 Width'
+						>,
+						<SurgeNamedParam
+						'A Osc 1 Sync'
+						>,
+						<SurgeNamedParam
+						'A Osc 1 Unison Detune'
+						>,
+						<SurgeNamedParam
+						'A Osc 1 Unison Voices'
+						>
+					]
+				},
+				{
+					'type': <SurgeNamedParam
+					'A Osc 2 Type'
+					>,
+					'pitch': <SurgeNamedParam
+					'A Osc 2 Pitch'
+					>,
+					'octave': <SurgeNamedParam
+					'A Osc 2 Octave'
+					>,
+					'keytrack': <SurgeNamedParam
+					'A Osc 2 Keytrack'
+					>,
+					'retrigger': <SurgeNamedParam
+					'A Osc 2 Retrigger'
+					>,
+					'p': [
+						<SurgeNamedParam
+						'A Osc 2 Shape'
+						>,
+						<SurgeNamedParam
+						'A Osc 2 Width 1'
+						>,
+						<SurgeNamedParam
+						'A Osc 2 Width 2'
+						>,
+						<SurgeNamedParam
+						'A Osc 2 Sub Mix'
+						>,
+						<SurgeNamedParam
+						'A Osc 2 Sync'
+						>,
+						<SurgeNamedParam
+						'A Osc 2 Unison Detune'
+						>,
+						<SurgeNamedParam
+						'A Osc 2 Unison Voices'
+						>
+					]
+				},
+				{
+					'type': <SurgeNamedParam
+					'A Osc 3 Type'
+					>,
+					'pitch': <SurgeNamedParam
+					'A Osc 3 Pitch'
+					>,
+					'octave': <SurgeNamedParam
+					'A Osc 3 Octave'
+					>,
+					'keytrack': <SurgeNamedParam
+					'A Osc 3 Keytrack'
+					>,
+					'retrigger': <SurgeNamedParam
+					'A Osc 3 Retrigger'
+					>,
+					'p': [
+						<SurgeNamedParam
+						'A Osc 3 Shape'
+						>,
+						<SurgeNamedParam
+						'A Osc 3 Width 1'
+						>,
+						<SurgeNamedParam
+						'A Osc 3 Width 2'
+						>,
+						<SurgeNamedParam
+						'A Osc 3 Sub Mix'
+						>,
+						<SurgeNamedParam
+						'A Osc 3 Sync'
+						>,
+						<SurgeNamedParam
+						'A Osc 3 Unison Detune'
+						>,
+						<SurgeNamedParam
+						'A Osc 3 Unison Voices'
+						>
+					]
+				}
+			],
+			'filterunit': [
+				{
+					'type': <SurgeNamedParam
+					'A Filter 1 Type'
+					>,
+					'subtype': <SurgeNamedParam
+					'A Filter 1 Subtype'
+					>,
+					'cutoff': <SurgeNamedParam
+					'A Filter 1 Cutoff'
+					>,
+					'resonance': <SurgeNamedParam
+					'A Filter 1 Resonance'
+					>,
+					'envmod': <SurgeNamedParam
+					'A Filter 1 FEG Mod Amount'
+					>,
+					'keytrack': <SurgeNamedParam
+					'A Filter 1 Keytrack'
+					>
+				},
+				{
+					'type': <SurgeNamedParam
+					'A Filter 2 Type'
+					>,
+					'subtype': <SurgeNamedParam
+					'A Filter 2 Subtype'
+					>,
+					'cutoff': <SurgeNamedParam
+					'A Filter 2 Cutoff'
+					>,
+					'resonance': <SurgeNamedParam
+					'A Filter 2 Resonance'
+					>,
+					'envmod': <SurgeNamedParam
+					'A Filter 2 FEG Mod Amount'
+					>,
+					'keytrack': <SurgeNamedParam
+					'A Filter 2 Keytrack'
+					>
+				}
+			],
+			'wsunit': {
+				'type': <SurgeNamedParam
+				'A Waveshaper Type'
+				>,
+				'drive': <SurgeNamedParam
+				'A Waveshaper Drive'
+				>
+			},
+			'adsr': [
+				{
+					'a': <SurgeNamedParam
+					'A Amp EG Attack'
+					>,
+					'd': <SurgeNamedParam
+					'A Amp EG Decay'
+					>,
+					's': <SurgeNamedParam
+					'A Amp EG Sustain'
+					>,
+					'r': <SurgeNamedParam
+					'A Amp EG Release'
+					>,
+					'a_s': <SurgeNamedParam
+					'A Amp EG Attack Shape'
+					>,
+					'd_s': <SurgeNamedParam
+					'A Amp EG Decay Shape'
+					>,
+					'r_s': <SurgeNamedParam
+					'A Amp EG Release Shape'
+					>,
+					'mode': <SurgeNamedParam
+					'A Amp EG Envelope Mode'
+					>
+				},
+				{
+					'a': <SurgeNamedParam
+					'A Filter EG Attack'
+					>,
+					'd': <SurgeNamedParam
+					'A Filter EG Decay'
+					>,
+					's': <SurgeNamedParam
+					'A Filter EG Sustain'
+					>,
+					'r': <SurgeNamedParam
+					'A Filter EG Release'
+					>,
+					'a_s': <SurgeNamedParam
+					'A Filter EG Attack Shape'
+					>,
+					'd_s': <SurgeNamedParam
+					'A Filter EG Decay Shape'
+					>,
+					'r_s': <SurgeNamedParam
+					'A Filter EG Release Shape'
+					>,
+					'mode': <SurgeNamedParam
+					'A Filter EG Envelope Mode'
+					>
+				}
+			],
+			'lfo': [
+				{
+					'rate': <SurgeNamedParam
+					'A LFO 1 Rate'
+					>,
+					'shape': <SurgeNamedParam
+					'A LFO 1 Type'
+					>,
+					'start_phase': <SurgeNamedParam
+					'A LFO 1 Phase'
+					>,
+					'magnitude': <SurgeNamedParam
+					'A LFO 1 Amplitude'
+					>,
+					'deform': <SurgeNamedParam
+					'A LFO 1 Deform'
+					>,
+					'trigmode': <SurgeNamedParam
+					'A LFO 1 Trigger Mode'
+					>,
+					'unipolar': <SurgeNamedParam
+					'A LFO 1 Unipolar'
+					>,
+					'delay': <SurgeNamedParam
+					'A LFO 1 Delay'
+					>,
+					'hold': <SurgeNamedParam
+					'A LFO 1 Hold'
+					>,
+					'attack': <SurgeNamedParam
+					'A LFO 1 Attack'
+					>,
+					'decay': <SurgeNamedParam
+					'A LFO 1 Decay'
+					>,
+					'sustain': <SurgeNamedParam
+					'A LFO 1 Sustain'
+					>,
+					'release': <SurgeNamedParam
+					'A LFO 1 Release'
+					>
+				},
+				{
+					'rate': <SurgeNamedParam
+					'A LFO 2 Rate'
+					>,
+					'shape': <SurgeNamedParam
+					'A LFO 2 Type'
+					>,
+					'start_phase': <SurgeNamedParam
+					'A LFO 2 Phase'
+					>,
+					'magnitude': <SurgeNamedParam
+					'A LFO 2 Amplitude'
+					>,
+					'deform': <SurgeNamedParam
+					'A LFO 2 Deform'
+					>,
+					'trigmode': <SurgeNamedParam
+					'A LFO 2 Trigger Mode'
+					>,
+					'unipolar': <SurgeNamedParam
+					'A LFO 2 Unipolar'
+					>,
+					'delay': <SurgeNamedParam
+					'A LFO 2 Delay'
+					>,
+					'hold': <SurgeNamedParam
+					'A LFO 2 Hold'
+					>,
+					'attack': <SurgeNamedParam
+					'A LFO 2 Attack'
+					>,
+					'decay': <SurgeNamedParam
+					'A LFO 2 Decay'
+					>,
+					'sustain': <SurgeNamedParam
+					'A LFO 2 Sustain'
+					>,
+					'release': <SurgeNamedParam
+					'A LFO 2 Release'
+					>
+				},
+				{
+					'rate': <SurgeNamedParam
+					'A LFO 3 Rate'
+					>,
+					'shape': <SurgeNamedParam
+					'A LFO 3 Type'
+					>,
+					'start_phase': <SurgeNamedParam
+					'A LFO 3 Phase'
+					>,
+					'magnitude': <SurgeNamedParam
+					'A LFO 3 Amplitude'
+					>,
+					'deform': <SurgeNamedParam
+					'A LFO 3 Deform'
+					>,
+					'trigmode': <SurgeNamedParam
+					'A LFO 3 Trigger Mode'
+					>,
+					'unipolar': <SurgeNamedParam
+					'A LFO 3 Unipolar'
+					>,
+					'delay': <SurgeNamedParam
+					'A LFO 3 Delay'
+					>,
+					'hold': <SurgeNamedParam
+					'A LFO 3 Hold'
+					>,
+					'attack': <SurgeNamedParam
+					'A LFO 3 Attack'
+					>,
+					'decay': <SurgeNamedParam
+					'A LFO 3 Decay'
+					>,
+					'sustain': <SurgeNamedParam
+					'A LFO 3 Sustain'
+					>,
+					'release': <SurgeNamedParam
+					'A LFO 3 Release'
+					>
+				},
+				{
+					'rate': <SurgeNamedParam
+					'A LFO 4 Rate'
+					>,
+					'shape': <SurgeNamedParam
+					'A LFO 4 Type'
+					>,
+					'start_phase': <SurgeNamedParam
+					'A LFO 4 Phase'
+					>,
+					'magnitude': <SurgeNamedParam
+					'A LFO 4 Amplitude'
+					>,
+					'deform': <SurgeNamedParam
+					'A LFO 4 Deform'
+					>,
+					'trigmode': <SurgeNamedParam
+					'A LFO 4 Trigger Mode'
+					>,
+					'unipolar': <SurgeNamedParam
+					'A LFO 4 Unipolar'
+					>,
+					'delay': <SurgeNamedParam
+					'A LFO 4 Delay'
+					>,
+					'hold': <SurgeNamedParam
+					'A LFO 4 Hold'
+					>,
+					'attack': <SurgeNamedParam
+					'A LFO 4 Attack'
+					>,
+					'decay': <SurgeNamedParam
+					'A LFO 4 Decay'
+					>,
+					'sustain': <SurgeNamedParam
+					'A LFO 4 Sustain'
+					>,
+					'release': <SurgeNamedParam
+					'A LFO 4 Release'
+					>
+				},
+				{
+					'rate': <SurgeNamedParam
+					'A LFO 5 Rate'
+					>,
+					'shape': <SurgeNamedParam
+					'A LFO 5 Type'
+					>,
+					'start_phase': <SurgeNamedParam
+					'A LFO 5 Phase'
+					>,
+					'magnitude': <SurgeNamedParam
+					'A LFO 5 Amplitude'
+					>,
+					'deform': <SurgeNamedParam
+					'A LFO 5 Deform'
+					>,
+					'trigmode': <SurgeNamedParam
+					'A LFO 5 Trigger Mode'
+					>,
+					'unipolar': <SurgeNamedParam
+					'A LFO 5 Unipolar'
+					>,
+					'delay': <SurgeNamedParam
+					'A LFO 5 Delay'
+					>,
+					'hold': <SurgeNamedParam
+					'A LFO 5 Hold'
+					>,
+					'attack': <SurgeNamedParam
+					'A LFO 5 Attack'
+					>,
+					'decay': <SurgeNamedParam
+					'A LFO 5 Decay'
+					>,
+					'sustain': <SurgeNamedParam
+					'A LFO 5 Sustain'
+					>,
+					'release': <SurgeNamedParam
+					'A LFO 5 Release'
+					>
+				},
+				{
+					'rate': <SurgeNamedParam
+					'A LFO 6 Rate'
+					>,
+					'shape': <SurgeNamedParam
+					'A LFO 6 Type'
+					>,
+					'start_phase': <SurgeNamedParam
+					'A LFO 6 Phase'
+					>,
+					'magnitude': <SurgeNamedParam
+					'A LFO 6 Amplitude'
+					>,
+					'deform': <SurgeNamedParam
+					'A LFO 6 Deform'
+					>,
+					'trigmode': <SurgeNamedParam
+					'A LFO 6 Trigger Mode'
+					>,
+					'unipolar': <SurgeNamedParam
+					'A LFO 6 Unipolar'
+					>,
+					'delay': <SurgeNamedParam
+					'A LFO 6 Delay'
+					>,
+					'hold': <SurgeNamedParam
+					'A LFO 6 Hold'
+					>,
+					'attack': <SurgeNamedParam
+					'A LFO 6 Attack'
+					>,
+					'decay': <SurgeNamedParam
+					'A LFO 6 Decay'
+					>,
+					'sustain': <SurgeNamedParam
+					'A LFO 6 Sustain'
+					>,
+					'release': <SurgeNamedParam
+					'A LFO 6 Release'
+					>
+				},
+				{
+					'rate': <SurgeNamedParam
+					'A Scene LFO 1 Rate'
+					>,
+					'shape': <SurgeNamedParam
+					'A Scene LFO 1 Type'
+					>,
+					'start_phase': <SurgeNamedParam
+					'A Scene LFO 1 Phase'
+					>,
+					'magnitude': <SurgeNamedParam
+					'A Scene LFO 1 Amplitude'
+					>,
+					'deform': <SurgeNamedParam
+					'A Scene LFO 1 Deform'
+					>,
+					'trigmode': <SurgeNamedParam
+					'A Scene LFO 1 Trigger Mode'
+					>,
+					'unipolar': <SurgeNamedParam
+					'A Scene LFO 1 Unipolar'
+					>,
+					'delay': <SurgeNamedParam
+					'A Scene LFO 1 Delay'
+					>,
+					'hold': <SurgeNamedParam
+					'A Scene LFO 1 Hold'
+					>,
+					'attack': <SurgeNamedParam
+					'A Scene LFO 1 Attack'
+					>,
+					'decay': <SurgeNamedParam
+					'A Scene LFO 1 Decay'
+					>,
+					'sustain': <SurgeNamedParam
+					'A Scene LFO 1 Sustain'
+					>,
+					'release': <SurgeNamedParam
+					'A Scene LFO 1 Release'
+					>
+				},
+				{
+					'rate': <SurgeNamedParam
+					'A Scene LFO 2 Rate'
+					>,
+					'shape': <SurgeNamedParam
+					'A Scene LFO 2 Type'
+					>,
+					'start_phase': <SurgeNamedParam
+					'A Scene LFO 2 Phase'
+					>,
+					'magnitude': <SurgeNamedParam
+					'A Scene LFO 2 Amplitude'
+					>,
+					'deform': <SurgeNamedParam
+					'A Scene LFO 2 Deform'
+					>,
+					'trigmode': <SurgeNamedParam
+					'A Scene LFO 2 Trigger Mode'
+					>,
+					'unipolar': <SurgeNamedParam
+					'A Scene LFO 2 Unipolar'
+					>,
+					'delay': <SurgeNamedParam
+					'A Scene LFO 2 Delay'
+					>,
+					'hold': <SurgeNamedParam
+					'A Scene LFO 2 Hold'
+					>,
+					'attack': <SurgeNamedParam
+					'A Scene LFO 2 Attack'
+					>,
+					'decay': <SurgeNamedParam
+					'A Scene LFO 2 Decay'
+					>,
+					'sustain': <SurgeNamedParam
+					'A Scene LFO 2 Sustain'
+					>,
+					'release': <SurgeNamedParam
+					'A Scene LFO 2 Release'
+					>
+				},
+				{
+					'rate': <SurgeNamedParam
+					'A Scene LFO 3 Rate'
+					>,
+					'shape': <SurgeNamedParam
+					'A Scene LFO 3 Type'
+					>,
+					'start_phase': <SurgeNamedParam
+					'A Scene LFO 3 Phase'
+					>,
+					'magnitude': <SurgeNamedParam
+					'A Scene LFO 3 Amplitude'
+					>,
+					'deform': <SurgeNamedParam
+					'A Scene LFO 3 Deform'
+					>,
+					'trigmode': <SurgeNamedParam
+					'A Scene LFO 3 Trigger Mode'
+					>,
+					'unipolar': <SurgeNamedParam
+					'A Scene LFO 3 Unipolar'
+					>,
+					'delay': <SurgeNamedParam
+					'A Scene LFO 3 Delay'
+					>,
+					'hold': <SurgeNamedParam
+					'A Scene LFO 3 Hold'
+					>,
+					'attack': <SurgeNamedParam
+					'A Scene LFO 3 Attack'
+					>,
+					'decay': <SurgeNamedParam
+					'A Scene LFO 3 Decay'
+					>,
+					'sustain': <SurgeNamedParam
+					'A Scene LFO 3 Sustain'
+					>,
+					'release': <SurgeNamedParam
+					'A Scene LFO 3 Release'
+					>
+				},
+				{
+					'rate': <SurgeNamedParam
+					'A Scene LFO 4 Rate'
+					>,
+					'shape': <SurgeNamedParam
+					'A Scene LFO 4 Type'
+					>,
+					'start_phase': <SurgeNamedParam
+					'A Scene LFO 4 Phase'
+					>,
+					'magnitude': <SurgeNamedParam
+					'A Scene LFO 4 Amplitude'
+					>,
+					'deform': <SurgeNamedParam
+					'A Scene LFO 4 Deform'
+					>,
+					'trigmode': <SurgeNamedParam
+					'A Scene LFO 4 Trigger Mode'
+					>,
+					'unipolar': <SurgeNamedParam
+					'A Scene LFO 4 Unipolar'
+					>,
+					'delay': <SurgeNamedParam
+					'A Scene LFO 4 Delay'
+					>,
+					'hold': <SurgeNamedParam
+					'A Scene LFO 4 Hold'
+					>,
+					'attack': <SurgeNamedParam
+					'A Scene LFO 4 Attack'
+					>,
+					'decay': <SurgeNamedParam
+					'A Scene LFO 4 Decay'
+					>,
+					'sustain': <SurgeNamedParam
+					'A Scene LFO 4 Sustain'
+					>,
+					'release': <SurgeNamedParam
+					'A Scene LFO 4 Release'
+					>
+				},
+				{
+					'rate': <SurgeNamedParam
+					'A Scene LFO 5 Rate'
+					>,
+					'shape': <SurgeNamedParam
+					'A Scene LFO 5 Type'
+					>,
+					'start_phase': <SurgeNamedParam
+					'A Scene LFO 5 Phase'
+					>,
+					'magnitude': <SurgeNamedParam
+					'A Scene LFO 5 Amplitude'
+					>,
+					'deform': <SurgeNamedParam
+					'A Scene LFO 5 Deform'
+					>,
+					'trigmode': <SurgeNamedParam
+					'A Scene LFO 5 Trigger Mode'
+					>,
+					'unipolar': <SurgeNamedParam
+					'A Scene LFO 5 Unipolar'
+					>,
+					'delay': <SurgeNamedParam
+					'A Scene LFO 5 Delay'
+					>,
+					'hold': <SurgeNamedParam
+					'A Scene LFO 5 Hold'
+					>,
+					'attack': <SurgeNamedParam
+					'A Scene LFO 5 Attack'
+					>,
+					'decay': <SurgeNamedParam
+					'A Scene LFO 5 Decay'
+					>,
+					'sustain': <SurgeNamedParam
+					'A Scene LFO 5 Sustain'
+					>,
+					'release': <SurgeNamedParam
+					'A Scene LFO 5 Release'
+					>
+				},
+				{
+					'rate': <SurgeNamedParam
+					'A Scene LFO 6 Rate'
+					>,
+					'shape': <SurgeNamedParam
+					'A Scene LFO 6 Type'
+					>,
+					'start_phase': <SurgeNamedParam
+					'A Scene LFO 6 Phase'
+					>,
+					'magnitude': <SurgeNamedParam
+					'A Scene LFO 6 Amplitude'
+					>,
+					'deform': <SurgeNamedParam
+					'A Scene LFO 6 Deform'
+					>,
+					'trigmode': <SurgeNamedParam
+					'A Scene LFO 6 Trigger Mode'
+					>,
+					'unipolar': <SurgeNamedParam
+					'A Scene LFO 6 Unipolar'
+					>,
+					'delay': <SurgeNamedParam
+					'A Scene LFO 6 Delay'
+					>,
+					'hold': <SurgeNamedParam
+					'A Scene LFO 6 Hold'
+					>,
+					'attack': <SurgeNamedParam
+					'A Scene LFO 6 Attack'
+					>,
+					'decay': <SurgeNamedParam
+					'A Scene LFO 6 Decay'
+					>,
+					'sustain': <SurgeNamedParam
+					'A Scene LFO 6 Sustain'
+					>,
+					'release': <SurgeNamedParam
+					'A Scene LFO 6 Release'
+					>
+				}
+			],
+			'pitch': <SurgeNamedParam
+			'A Pitch'
+			>,
+			'octave': <SurgeNamedParam
+			'A Octave'
+			>,
+			'fm_depth': <SurgeNamedParam
+			'A FM Depth'
+			>,
+			'fm_switch': <SurgeNamedParam
+			'A FM Routing'
+			>,
+			'drift': <SurgeNamedParam
+			'A Osc Drift'
+			>,
+			'noise_colour': <SurgeNamedParam
+			'A Noise Color'
+			>,
+			'keytrack_root': <SurgeNamedParam
+			'A Keytrack Root Key'
+			>,
+			'level_o1': <SurgeNamedParam
+			'A Osc 1 Volume'
+			>,
+			'mute_o1': <SurgeNamedParam
+			'A Osc 1 Mute'
+			>,
+			'solo_o1': <SurgeNamedParam
+			'A Osc 1 Solo'
+			>,
+			'route_o1': <SurgeNamedParam
+			'A Osc 1 Route'
+			>,
+			'level_o2': <SurgeNamedParam
+			'A Osc 2 Volume'
+			>,
+			'mute_o2': <SurgeNamedParam
+			'A Osc 2 Mute'
+			>,
+			'solo_o2': <SurgeNamedParam
+			'A Osc 2 Solo'
+			>,
+			'route_o2': <SurgeNamedParam
+			'A Osc 2 Route'
+			>,
+			'level_o3': <SurgeNamedParam
+			'A Osc 3 Volume'
+			>,
+			'mute_o3': <SurgeNamedParam
+			'A Osc 3 Mute'
+			>,
+			'solo_o3': <SurgeNamedParam
+			'A Osc 3 Solo'
+			>,
+			'route_o3': <SurgeNamedParam
+			'A Osc 3 Route'
+			>,
+			'level_ring_12': <SurgeNamedParam
+			'A Ring Modulation 1x2 Volume'
+			>,
+			'mute_ring_12': <SurgeNamedParam
+			'A Ring Modulation 1x2 Mute'
+			>,
+			'solo_ring_12': <SurgeNamedParam
+			'A Ring Modulation 1x2 Solo'
+			>,
+			'route_ring_12': <SurgeNamedParam
+			'A Ring Modulation 1x2 Route'
+			>,
+			'level_ring_23': <SurgeNamedParam
+			'A Ring Modulation 2x3 Volume'
+			>,
+			'mute_ring_23': <SurgeNamedParam
+			'A Ring Modulation 2x3 Mute'
+			>,
+			'solo_ring_23': <SurgeNamedParam
+			'A Ring Modulation 2x3 Solo'
+			>,
+			'route_ring_23': <SurgeNamedParam
+			'A Ring Modulation 2x3 Route'
+			>,
+			'level_noise': <SurgeNamedParam
+			'A Noise Volume'
+			>,
+			'mute_noise': <SurgeNamedParam
+			'A Noise Mute'
+			>,
+			'solo_noise': <SurgeNamedParam
+			'A Noise Solo'
+			>,
+			'route_noise': <SurgeNamedParam
+			'A Noise Route'
+			>,
+			'level_pfg': <SurgeNamedParam
+			'A Pre-Filter Gain'
+			>,
+			'vca_level': <SurgeNamedParam
+			'A VCA Gain'
+			>,
+			'pbrange_dn': <SurgeNamedParam
+			'A Pitch Bend Down Range'
+			>,
+			'pbrange_up': <SurgeNamedParam
+			'A Pitch Bend Up Range'
+			>,
+			'vca_velsense': <SurgeNamedParam
+			'A Velocity > VCA Gain'
+			>,
+			'polymode': <SurgeNamedParam
+			'A Play Mode'
+			>,
+			'portamento': <SurgeNamedParam
+			'A Portamento'
+			>,
+			'volume': <SurgeNamedParam
+			'A Volume'
+			>,
+			'pan': <SurgeNamedParam
+			'A Pan'
+			>,
+			'width': <SurgeNamedParam
+			'A Width'
+			>,
+			'send_level': [
+				<SurgeNamedParam
+				'A Send FX 1 Level'
+				>,
+				<SurgeNamedParam
+				'A Send FX 2 Level'
+				>
+			],
+			'f2_cutoff_is_offset': <SurgeNamedParam
+			'A Filter 2 Offset Mode'
+			>,
+			'f2_link_resonance': <SurgeNamedParam
+			'A Link Resonance'
+			>,
+			'feedback': <SurgeNamedParam
+			'A Feedback'
+			>,
+			'filterblock_configuration': <SurgeNamedParam
+			'A Filter Configuration'
+			>,
+			'filter_balance': <SurgeNamedParam
+			'A Filter Balance'
+			>,
+			'lowcut': <SurgeNamedParam
+			'A Highpass'
+			>
+		},
+		{
+			'osc': [
+				{
+					'type': <SurgeNamedParam
+					'B Osc 1 Type'
+					>,
+					'pitch': <SurgeNamedParam
+					'B Osc 1 Pitch'
+					>,
+					'octave': <SurgeNamedParam
+					'B Osc 1 Octave'
+					>,
+					'keytrack': <SurgeNamedParam
+					'B Osc 1 Keytrack'
+					>,
+					'retrigger': <SurgeNamedParam
+					'B Osc 1 Retrigger'
+					>,
+					'p': [
+						<SurgeNamedParam
+						'B Osc 1 Shape'
+						>,
+						<SurgeNamedParam
+						'B Osc 1 Width 1'
+						>,
+						<SurgeNamedParam
+						'B Osc 1 Width 2'
+						>,
+						<SurgeNamedParam
+						'B Osc 1 Sub Mix'
+						>,
+						<SurgeNamedParam
+						'B Osc 1 Sync'
+						>,
+						<SurgeNamedParam
+						'B Osc 1 Unison Detune'
+						>,
+						<SurgeNamedParam
+						'B Osc 1 Unison Voices'
+						>
+					]
+				},
+				{
+					'type': <SurgeNamedParam
+					'B Osc 2 Type'
+					>,
+					'pitch': <SurgeNamedParam
+					'B Osc 2 Pitch'
+					>,
+					'octave': <SurgeNamedParam
+					'B Osc 2 Octave'
+					>,
+					'keytrack': <SurgeNamedParam
+					'B Osc 2 Keytrack'
+					>,
+					'retrigger': <SurgeNamedParam
+					'B Osc 2 Retrigger'
+					>,
+					'p': [
+						<SurgeNamedParam
+						'B Osc 2 Shape'
+						>,
+						<SurgeNamedParam
+						'B Osc 2 Width 1'
+						>,
+						<SurgeNamedParam
+						'B Osc 2 Width 2'
+						>,
+						<SurgeNamedParam
+						'B Osc 2 Sub Mix'
+						>,
+						<SurgeNamedParam
+						'B Osc 2 Sync'
+						>,
+						<SurgeNamedParam
+						'B Osc 2 Unison Detune'
+						>,
+						<SurgeNamedParam
+						'B Osc 2 Unison Voices'
+						>
+					]
+				},
+				{
+					'type': <SurgeNamedParam
+					'B Osc 3 Type'
+					>,
+					'pitch': <SurgeNamedParam
+					'B Osc 3 Pitch'
+					>,
+					'octave': <SurgeNamedParam
+					'B Osc 3 Octave'
+					>,
+					'keytrack': <SurgeNamedParam
+					'B Osc 3 Keytrack'
+					>,
+					'retrigger': <SurgeNamedParam
+					'B Osc 3 Retrigger'
+					>,
+					'p': [
+						<SurgeNamedParam
+						'B Osc 3 Shape'
+						>,
+						<SurgeNamedParam
+						'B Osc 3 Width 1'
+						>,
+						<SurgeNamedParam
+						'B Osc 3 Width 2'
+						>,
+						<SurgeNamedParam
+						'B Osc 3 Sub Mix'
+						>,
+						<SurgeNamedParam
+						'B Osc 3 Sync'
+						>,
+						<SurgeNamedParam
+						'B Osc 3 Unison Detune'
+						>,
+						<SurgeNamedParam
+						'B Osc 3 Unison Voices'
+						>
+					]
+				}
+			],
+			'filterunit': [
+				{
+					'type': <SurgeNamedParam
+					'B Filter 1 Type'
+					>,
+					'subtype': <SurgeNamedParam
+					'B Filter 1 Subtype'
+					>,
+					'cutoff': <SurgeNamedParam
+					'B Filter 1 Cutoff'
+					>,
+					'resonance': <SurgeNamedParam
+					'B Filter 1 Resonance'
+					>,
+					'envmod': <SurgeNamedParam
+					'B Filter 1 FEG Mod Amount'
+					>,
+					'keytrack': <SurgeNamedParam
+					'B Filter 1 Keytrack'
+					>
+				},
+				{
+					'type': <SurgeNamedParam
+					'B Filter 2 Type'
+					>,
+					'subtype': <SurgeNamedParam
+					'B Filter 2 Subtype'
+					>,
+					'cutoff': <SurgeNamedParam
+					'B Filter 2 Cutoff'
+					>,
+					'resonance': <SurgeNamedParam
+					'B Filter 2 Resonance'
+					>,
+					'envmod': <SurgeNamedParam
+					'B Filter 2 FEG Mod Amount'
+					>,
+					'keytrack': <SurgeNamedParam
+					'B Filter 2 Keytrack'
+					>
+				}
+			],
+			'wsunit': {
+				'type': <SurgeNamedParam
+				'B Waveshaper Type'
+				>,
+				'drive': <SurgeNamedParam
+				'B Waveshaper Drive'
+				>
+			},
+			'adsr': [
+				{
+					'a': <SurgeNamedParam
+					'B Amp EG Attack'
+					>,
+					'd': <SurgeNamedParam
+					'B Amp EG Decay'
+					>,
+					's': <SurgeNamedParam
+					'B Amp EG Sustain'
+					>,
+					'r': <SurgeNamedParam
+					'B Amp EG Release'
+					>,
+					'a_s': <SurgeNamedParam
+					'B Amp EG Attack Shape'
+					>,
+					'd_s': <SurgeNamedParam
+					'B Amp EG Decay Shape'
+					>,
+					'r_s': <SurgeNamedParam
+					'B Amp EG Release Shape'
+					>,
+					'mode': <SurgeNamedParam
+					'B Amp EG Envelope Mode'
+					>
+				},
+				{
+					'a': <SurgeNamedParam
+					'B Filter EG Attack'
+					>,
+					'd': <SurgeNamedParam
+					'B Filter EG Decay'
+					>,
+					's': <SurgeNamedParam
+					'B Filter EG Sustain'
+					>,
+					'r': <SurgeNamedParam
+					'B Filter EG Release'
+					>,
+					'a_s': <SurgeNamedParam
+					'B Filter EG Attack Shape'
+					>,
+					'd_s': <SurgeNamedParam
+					'B Filter EG Decay Shape'
+					>,
+					'r_s': <SurgeNamedParam
+					'B Filter EG Release Shape'
+					>,
+					'mode': <SurgeNamedParam
+					'B Filter EG Envelope Mode'
+					>
+				}
+			],
+			'lfo': [
+				{
+					'rate': <SurgeNamedParam
+					'B LFO 1 Rate'
+					>,
+					'shape': <SurgeNamedParam
+					'B LFO 1 Type'
+					>,
+					'start_phase': <SurgeNamedParam
+					'B LFO 1 Phase'
+					>,
+					'magnitude': <SurgeNamedParam
+					'B LFO 1 Amplitude'
+					>,
+					'deform': <SurgeNamedParam
+					'B LFO 1 Deform'
+					>,
+					'trigmode': <SurgeNamedParam
+					'B LFO 1 Trigger Mode'
+					>,
+					'unipolar': <SurgeNamedParam
+					'B LFO 1 Unipolar'
+					>,
+					'delay': <SurgeNamedParam
+					'B LFO 1 Delay'
+					>,
+					'hold': <SurgeNamedParam
+					'B LFO 1 Hold'
+					>,
+					'attack': <SurgeNamedParam
+					'B LFO 1 Attack'
+					>,
+					'decay': <SurgeNamedParam
+					'B LFO 1 Decay'
+					>,
+					'sustain': <SurgeNamedParam
+					'B LFO 1 Sustain'
+					>,
+					'release': <SurgeNamedParam
+					'B LFO 1 Release'
+					>
+				},
+				{
+					'rate': <SurgeNamedParam
+					'B LFO 2 Rate'
+					>,
+					'shape': <SurgeNamedParam
+					'B LFO 2 Type'
+					>,
+					'start_phase': <SurgeNamedParam
+					'B LFO 2 Phase'
+					>,
+					'magnitude': <SurgeNamedParam
+					'B LFO 2 Amplitude'
+					>,
+					'deform': <SurgeNamedParam
+					'B LFO 2 Deform'
+					>,
+					'trigmode': <SurgeNamedParam
+					'B LFO 2 Trigger Mode'
+					>,
+					'unipolar': <SurgeNamedParam
+					'B LFO 2 Unipolar'
+					>,
+					'delay': <SurgeNamedParam
+					'B LFO 2 Delay'
+					>,
+					'hold': <SurgeNamedParam
+					'B LFO 2 Hold'
+					>,
+					'attack': <SurgeNamedParam
+					'B LFO 2 Attack'
+					>,
+					'decay': <SurgeNamedParam
+					'B LFO 2 Decay'
+					>,
+					'sustain': <SurgeNamedParam
+					'B LFO 2 Sustain'
+					>,
+					'release': <SurgeNamedParam
+					'B LFO 2 Release'
+					>
+				},
+				{
+					'rate': <SurgeNamedParam
+					'B LFO 3 Rate'
+					>,
+					'shape': <SurgeNamedParam
+					'B LFO 3 Type'
+					>,
+					'start_phase': <SurgeNamedParam
+					'B LFO 3 Phase'
+					>,
+					'magnitude': <SurgeNamedParam
+					'B LFO 3 Amplitude'
+					>,
+					'deform': <SurgeNamedParam
+					'B LFO 3 Deform'
+					>,
+					'trigmode': <SurgeNamedParam
+					'B LFO 3 Trigger Mode'
+					>,
+					'unipolar': <SurgeNamedParam
+					'B LFO 3 Unipolar'
+					>,
+					'delay': <SurgeNamedParam
+					'B LFO 3 Delay'
+					>,
+					'hold': <SurgeNamedParam
+					'B LFO 3 Hold'
+					>,
+					'attack': <SurgeNamedParam
+					'B LFO 3 Attack'
+					>,
+					'decay': <SurgeNamedParam
+					'B LFO 3 Decay'
+					>,
+					'sustain': <SurgeNamedParam
+					'B LFO 3 Sustain'
+					>,
+					'release': <SurgeNamedParam
+					'B LFO 3 Release'
+					>
+				},
+				{
+					'rate': <SurgeNamedParam
+					'B LFO 4 Rate'
+					>,
+					'shape': <SurgeNamedParam
+					'B LFO 4 Type'
+					>,
+					'start_phase': <SurgeNamedParam
+					'B LFO 4 Phase'
+					>,
+					'magnitude': <SurgeNamedParam
+					'B LFO 4 Amplitude'
+					>,
+					'deform': <SurgeNamedParam
+					'B LFO 4 Deform'
+					>,
+					'trigmode': <SurgeNamedParam
+					'B LFO 4 Trigger Mode'
+					>,
+					'unipolar': <SurgeNamedParam
+					'B LFO 4 Unipolar'
+					>,
+					'delay': <SurgeNamedParam
+					'B LFO 4 Delay'
+					>,
+					'hold': <SurgeNamedParam
+					'B LFO 4 Hold'
+					>,
+					'attack': <SurgeNamedParam
+					'B LFO 4 Attack'
+					>,
+					'decay': <SurgeNamedParam
+					'B LFO 4 Decay'
+					>,
+					'sustain': <SurgeNamedParam
+					'B LFO 4 Sustain'
+					>,
+					'release': <SurgeNamedParam
+					'B LFO 4 Release'
+					>
+				},
+				{
+					'rate': <SurgeNamedParam
+					'B LFO 5 Rate'
+					>,
+					'shape': <SurgeNamedParam
+					'B LFO 5 Type'
+					>,
+					'start_phase': <SurgeNamedParam
+					'B LFO 5 Phase'
+					>,
+					'magnitude': <SurgeNamedParam
+					'B LFO 5 Amplitude'
+					>,
+					'deform': <SurgeNamedParam
+					'B LFO 5 Deform'
+					>,
+					'trigmode': <SurgeNamedParam
+					'B LFO 5 Trigger Mode'
+					>,
+					'unipolar': <SurgeNamedParam
+					'B LFO 5 Unipolar'
+					>,
+					'delay': <SurgeNamedParam
+					'B LFO 5 Delay'
+					>,
+					'hold': <SurgeNamedParam
+					'B LFO 5 Hold'
+					>,
+					'attack': <SurgeNamedParam
+					'B LFO 5 Attack'
+					>,
+					'decay': <SurgeNamedParam
+					'B LFO 5 Decay'
+					>,
+					'sustain': <SurgeNamedParam
+					'B LFO 5 Sustain'
+					>,
+					'release': <SurgeNamedParam
+					'B LFO 5 Release'
+					>
+				},
+				{
+					'rate': <SurgeNamedParam
+					'B LFO 6 Rate'
+					>,
+					'shape': <SurgeNamedParam
+					'B LFO 6 Type'
+					>,
+					'start_phase': <SurgeNamedParam
+					'B LFO 6 Phase'
+					>,
+					'magnitude': <SurgeNamedParam
+					'B LFO 6 Amplitude'
+					>,
+					'deform': <SurgeNamedParam
+					'B LFO 6 Deform'
+					>,
+					'trigmode': <SurgeNamedParam
+					'B LFO 6 Trigger Mode'
+					>,
+					'unipolar': <SurgeNamedParam
+					'B LFO 6 Unipolar'
+					>,
+					'delay': <SurgeNamedParam
+					'B LFO 6 Delay'
+					>,
+					'hold': <SurgeNamedParam
+					'B LFO 6 Hold'
+					>,
+					'attack': <SurgeNamedParam
+					'B LFO 6 Attack'
+					>,
+					'decay': <SurgeNamedParam
+					'B LFO 6 Decay'
+					>,
+					'sustain': <SurgeNamedParam
+					'B LFO 6 Sustain'
+					>,
+					'release': <SurgeNamedParam
+					'B LFO 6 Release'
+					>
+				},
+				{
+					'rate': <SurgeNamedParam
+					'B Scene LFO 1 Rate'
+					>,
+					'shape': <SurgeNamedParam
+					'B Scene LFO 1 Type'
+					>,
+					'start_phase': <SurgeNamedParam
+					'B Scene LFO 1 Phase'
+					>,
+					'magnitude': <SurgeNamedParam
+					'B Scene LFO 1 Amplitude'
+					>,
+					'deform': <SurgeNamedParam
+					'B Scene LFO 1 Deform'
+					>,
+					'trigmode': <SurgeNamedParam
+					'B Scene LFO 1 Trigger Mode'
+					>,
+					'unipolar': <SurgeNamedParam
+					'B Scene LFO 1 Unipolar'
+					>,
+					'delay': <SurgeNamedParam
+					'B Scene LFO 1 Delay'
+					>,
+					'hold': <SurgeNamedParam
+					'B Scene LFO 1 Hold'
+					>,
+					'attack': <SurgeNamedParam
+					'B Scene LFO 1 Attack'
+					>,
+					'decay': <SurgeNamedParam
+					'B Scene LFO 1 Decay'
+					>,
+					'sustain': <SurgeNamedParam
+					'B Scene LFO 1 Sustain'
+					>,
+					'release': <SurgeNamedParam
+					'B Scene LFO 1 Release'
+					>
+				},
+				{
+					'rate': <SurgeNamedParam
+					'B Scene LFO 2 Rate'
+					>,
+					'shape': <SurgeNamedParam
+					'B Scene LFO 2 Type'
+					>,
+					'start_phase': <SurgeNamedParam
+					'B Scene LFO 2 Phase'
+					>,
+					'magnitude': <SurgeNamedParam
+					'B Scene LFO 2 Amplitude'
+					>,
+					'deform': <SurgeNamedParam
+					'B Scene LFO 2 Deform'
+					>,
+					'trigmode': <SurgeNamedParam
+					'B Scene LFO 2 Trigger Mode'
+					>,
+					'unipolar': <SurgeNamedParam
+					'B Scene LFO 2 Unipolar'
+					>,
+					'delay': <SurgeNamedParam
+					'B Scene LFO 2 Delay'
+					>,
+					'hold': <SurgeNamedParam
+					'B Scene LFO 2 Hold'
+					>,
+					'attack': <SurgeNamedParam
+					'B Scene LFO 2 Attack'
+					>,
+					'decay': <SurgeNamedParam
+					'B Scene LFO 2 Decay'
+					>,
+					'sustain': <SurgeNamedParam
+					'B Scene LFO 2 Sustain'
+					>,
+					'release': <SurgeNamedParam
+					'B Scene LFO 2 Release'
+					>
+				},
+				{
+					'rate': <SurgeNamedParam
+					'B Scene LFO 3 Rate'
+					>,
+					'shape': <SurgeNamedParam
+					'B Scene LFO 3 Type'
+					>,
+					'start_phase': <SurgeNamedParam
+					'B Scene LFO 3 Phase'
+					>,
+					'magnitude': <SurgeNamedParam
+					'B Scene LFO 3 Amplitude'
+					>,
+					'deform': <SurgeNamedParam
+					'B Scene LFO 3 Deform'
+					>,
+					'trigmode': <SurgeNamedParam
+					'B Scene LFO 3 Trigger Mode'
+					>,
+					'unipolar': <SurgeNamedParam
+					'B Scene LFO 3 Unipolar'
+					>,
+					'delay': <SurgeNamedParam
+					'B Scene LFO 3 Delay'
+					>,
+					'hold': <SurgeNamedParam
+					'B Scene LFO 3 Hold'
+					>,
+					'attack': <SurgeNamedParam
+					'B Scene LFO 3 Attack'
+					>,
+					'decay': <SurgeNamedParam
+					'B Scene LFO 3 Decay'
+					>,
+					'sustain': <SurgeNamedParam
+					'B Scene LFO 3 Sustain'
+					>,
+					'release': <SurgeNamedParam
+					'B Scene LFO 3 Release'
+					>
+				},
+				{
+					'rate': <SurgeNamedParam
+					'B Scene LFO 4 Rate'
+					>,
+					'shape': <SurgeNamedParam
+					'B Scene LFO 4 Type'
+					>,
+					'start_phase': <SurgeNamedParam
+					'B Scene LFO 4 Phase'
+					>,
+					'magnitude': <SurgeNamedParam
+					'B Scene LFO 4 Amplitude'
+					>,
+					'deform': <SurgeNamedParam
+					'B Scene LFO 4 Deform'
+					>,
+					'trigmode': <SurgeNamedParam
+					'B Scene LFO 4 Trigger Mode'
+					>,
+					'unipolar': <SurgeNamedParam
+					'B Scene LFO 4 Unipolar'
+					>,
+					'delay': <SurgeNamedParam
+					'B Scene LFO 4 Delay'
+					>,
+					'hold': <SurgeNamedParam
+					'B Scene LFO 4 Hold'
+					>,
+					'attack': <SurgeNamedParam
+					'B Scene LFO 4 Attack'
+					>,
+					'decay': <SurgeNamedParam
+					'B Scene LFO 4 Decay'
+					>,
+					'sustain': <SurgeNamedParam
+					'B Scene LFO 4 Sustain'
+					>,
+					'release': <SurgeNamedParam
+					'B Scene LFO 4 Release'
+					>
+				},
+				{
+					'rate': <SurgeNamedParam
+					'B Scene LFO 5 Rate'
+					>,
+					'shape': <SurgeNamedParam
+					'B Scene LFO 5 Type'
+					>,
+					'start_phase': <SurgeNamedParam
+					'B Scene LFO 5 Phase'
+					>,
+					'magnitude': <SurgeNamedParam
+					'B Scene LFO 5 Amplitude'
+					>,
+					'deform': <SurgeNamedParam
+					'B Scene LFO 5 Deform'
+					>,
+					'trigmode': <SurgeNamedParam
+					'B Scene LFO 5 Trigger Mode'
+					>,
+					'unipolar': <SurgeNamedParam
+					'B Scene LFO 5 Unipolar'
+					>,
+					'delay': <SurgeNamedParam
+					'B Scene LFO 5 Delay'
+					>,
+					'hold': <SurgeNamedParam
+					'B Scene LFO 5 Hold'
+					>,
+					'attack': <SurgeNamedParam
+					'B Scene LFO 5 Attack'
+					>,
+					'decay': <SurgeNamedParam
+					'B Scene LFO 5 Decay'
+					>,
+					'sustain': <SurgeNamedParam
+					'B Scene LFO 5 Sustain'
+					>,
+					'release': <SurgeNamedParam
+					'B Scene LFO 5 Release'
+					>
+				},
+				{
+					'rate': <SurgeNamedParam
+					'B Scene LFO 6 Rate'
+					>,
+					'shape': <SurgeNamedParam
+					'B Scene LFO 6 Type'
+					>,
+					'start_phase': <SurgeNamedParam
+					'B Scene LFO 6 Phase'
+					>,
+					'magnitude': <SurgeNamedParam
+					'B Scene LFO 6 Amplitude'
+					>,
+					'deform': <SurgeNamedParam
+					'B Scene LFO 6 Deform'
+					>,
+					'trigmode': <SurgeNamedParam
+					'B Scene LFO 6 Trigger Mode'
+					>,
+					'unipolar': <SurgeNamedParam
+					'B Scene LFO 6 Unipolar'
+					>,
+					'delay': <SurgeNamedParam
+					'B Scene LFO 6 Delay'
+					>,
+					'hold': <SurgeNamedParam
+					'B Scene LFO 6 Hold'
+					>,
+					'attack': <SurgeNamedParam
+					'B Scene LFO 6 Attack'
+					>,
+					'decay': <SurgeNamedParam
+					'B Scene LFO 6 Decay'
+					>,
+					'sustain': <SurgeNamedParam
+					'B Scene LFO 6 Sustain'
+					>,
+					'release': <SurgeNamedParam
+					'B Scene LFO 6 Release'
+					>
+				}
+			],
+			'pitch': <SurgeNamedParam
+			'B Pitch'
+			>,
+			'octave': <SurgeNamedParam
+			'B Octave'
+			>,
+			'fm_depth': <SurgeNamedParam
+			'B FM Depth'
+			>,
+			'fm_switch': <SurgeNamedParam
+			'B FM Routing'
+			>,
+			'drift': <SurgeNamedParam
+			'B Osc Drift'
+			>,
+			'noise_colour': <SurgeNamedParam
+			'B Noise Color'
+			>,
+			'keytrack_root': <SurgeNamedParam
+			'B Keytrack Root Key'
+			>,
+			'level_o1': <SurgeNamedParam
+			'B Osc 1 Volume'
+			>,
+			'mute_o1': <SurgeNamedParam
+			'B Osc 1 Mute'
+			>,
+			'solo_o1': <SurgeNamedParam
+			'B Osc 1 Solo'
+			>,
+			'route_o1': <SurgeNamedParam
+			'B Osc 1 Route'
+			>,
+			'level_o2': <SurgeNamedParam
+			'B Osc 2 Volume'
+			>,
+			'mute_o2': <SurgeNamedParam
+			'B Osc 2 Mute'
+			>,
+			'solo_o2': <SurgeNamedParam
+			'B Osc 2 Solo'
+			>,
+			'route_o2': <SurgeNamedParam
+			'B Osc 2 Route'
+			>,
+			'level_o3': <SurgeNamedParam
+			'B Osc 3 Volume'
+			>,
+			'mute_o3': <SurgeNamedParam
+			'B Osc 3 Mute'
+			>,
+			'solo_o3': <SurgeNamedParam
+			'B Osc 3 Solo'
+			>,
+			'route_o3': <SurgeNamedParam
+			'B Osc 3 Route'
+			>,
+			'level_ring_12': <SurgeNamedParam
+			'B Ring Modulation 1x2 Volume'
+			>,
+			'mute_ring_12': <SurgeNamedParam
+			'B Ring Modulation 1x2 Mute'
+			>,
+			'solo_ring_12': <SurgeNamedParam
+			'B Ring Modulation 1x2 Solo'
+			>,
+			'route_ring_12': <SurgeNamedParam
+			'B Ring Modulation 1x2 Route'
+			>,
+			'level_ring_23': <SurgeNamedParam
+			'B Ring Modulation 2x3 Volume'
+			>,
+			'mute_ring_23': <SurgeNamedParam
+			'B Ring Modulation 2x3 Mute'
+			>,
+			'solo_ring_23': <SurgeNamedParam
+			'B Ring Modulation 2x3 Solo'
+			>,
+			'route_ring_23': <SurgeNamedParam
+			'B Ring Modulation 2x3 Route'
+			>,
+			'level_noise': <SurgeNamedParam
+			'B Noise Volume'
+			>,
+			'mute_noise': <SurgeNamedParam
+			'B Noise Mute'
+			>,
+			'solo_noise': <SurgeNamedParam
+			'B Noise Solo'
+			>,
+			'route_noise': <SurgeNamedParam
+			'B Noise Route'
+			>,
+			'level_pfg': <SurgeNamedParam
+			'B Pre-Filter Gain'
+			>,
+			'vca_level': <SurgeNamedParam
+			'B VCA Gain'
+			>,
+			'pbrange_dn': <SurgeNamedParam
+			'B Pitch Bend Down Range'
+			>,
+			'pbrange_up': <SurgeNamedParam
+			'B Pitch Bend Up Range'
+			>,
+			'vca_velsense': <SurgeNamedParam
+			'B Velocity > VCA Gain'
+			>,
+			'polymode': <SurgeNamedParam
+			'B Play Mode'
+			>,
+			'portamento': <SurgeNamedParam
+			'B Portamento'
+			>,
+			'volume': <SurgeNamedParam
+			'B Volume'
+			>,
+			'pan': <SurgeNamedParam
+			'B Pan'
+			>,
+			'width': <SurgeNamedParam
+			'B Width'
+			>,
+			'send_level': [
+				<SurgeNamedParam
+				'B Send FX 1 Level'
+				>,
+				<SurgeNamedParam
+				'B Send FX 2 Level'
+				>
+			],
+			'f2_cutoff_is_offset': <SurgeNamedParam
+			'B Filter 2 Offset Mode'
+			>,
+			'f2_link_resonance': <SurgeNamedParam
+			'B Link Resonance'
+			>,
+			'feedback': <SurgeNamedParam
+			'B Feedback'
+			>,
+			'filterblock_configuration': <SurgeNamedParam
+			'B Filter Configuration'
+			>,
+			'filter_balance': <SurgeNamedParam
+			'B Filter Balance'
+			>,
+			'lowcut': <SurgeNamedParam
+			'B Highpass'
+			>
+		}
+	],
+	'fx': [
+		{
+			'type': <SurgeNamedParam
+			'FX A1 FX Type'
+			>,
+			'return_level': <SurgeNamedParam
+			'Send FX 1 Return'
+			>,
+			'p': [
+				<SurgeNamedParam
+				'FX A1 Param 1'
+				>,
+				<SurgeNamedParam
+				'FX A1 Param 2'
+				>,
+				<SurgeNamedParam
+				'FX A1 Param 3'
+				>,
+				<SurgeNamedParam
+				'FX A1 Param 4'
+				>,
+				<SurgeNamedParam
+				'FX A1 Param 5'
+				>,
+				<SurgeNamedParam
+				'FX A1 Param 6'
+				>,
+				<SurgeNamedParam
+				'FX A1 Param 7'
+				>,
+				<SurgeNamedParam
+				'FX A1 Param 8'
+				>,
+				<SurgeNamedParam
+				'FX A1 Param 9'
+				>,
+				<SurgeNamedParam
+				'FX A1 Param 10'
+				>,
+				<SurgeNamedParam
+				'FX A1 Param 11'
+				>,
+				<SurgeNamedParam
+				'FX A1 Param 12'
+				>
+			]
+		},
+		{
+			'type': <SurgeNamedParam
+			'FX A2 FX Type'
+			>,
+			'return_level': <SurgeNamedParam
+			'Send FX 1 Return'
+			>,
+			'p': [
+				<SurgeNamedParam
+				'FX A2 Param 1'
+				>,
+				<SurgeNamedParam
+				'FX A2 Param 2'
+				>,
+				<SurgeNamedParam
+				'FX A2 Param 3'
+				>,
+				<SurgeNamedParam
+				'FX A2 Param 4'
+				>,
+				<SurgeNamedParam
+				'FX A2 Param 5'
+				>,
+				<SurgeNamedParam
+				'FX A2 Param 6'
+				>,
+				<SurgeNamedParam
+				'FX A2 Param 7'
+				>,
+				<SurgeNamedParam
+				'FX A2 Param 8'
+				>,
+				<SurgeNamedParam
+				'FX A2 Param 9'
+				>,
+				<SurgeNamedParam
+				'FX A2 Param 10'
+				>,
+				<SurgeNamedParam
+				'FX A2 Param 11'
+				>,
+				<SurgeNamedParam
+				'FX A2 Param 12'
+				>
+			]
+		},
+		{
+			'type': <SurgeNamedParam
+			'FX B1 FX Type'
+			>,
+			'return_level': <SurgeNamedParam
+			'Send FX 1 Return'
+			>,
+			'p': [
+				<SurgeNamedParam
+				'FX B1 Param 1'
+				>,
+				<SurgeNamedParam
+				'FX B1 Param 2'
+				>,
+				<SurgeNamedParam
+				'FX B1 Param 3'
+				>,
+				<SurgeNamedParam
+				'FX B1 Param 4'
+				>,
+				<SurgeNamedParam
+				'FX B1 Param 5'
+				>,
+				<SurgeNamedParam
+				'FX B1 Param 6'
+				>,
+				<SurgeNamedParam
+				'FX B1 Param 7'
+				>,
+				<SurgeNamedParam
+				'FX B1 Param 8'
+				>,
+				<SurgeNamedParam
+				'FX B1 Param 9'
+				>,
+				<SurgeNamedParam
+				'FX B1 Param 10'
+				>,
+				<SurgeNamedParam
+				'FX B1 Param 11'
+				>,
+				<SurgeNamedParam
+				'FX B1 Param 12'
+				>
+			]
+		},
+		{
+			'type': <SurgeNamedParam
+			'FX B2 FX Type'
+			>,
+			'return_level': <SurgeNamedParam
+			'Send FX 1 Return'
+			>,
+			'p': [
+				<SurgeNamedParam
+				'FX B2 Param 1'
+				>,
+				<SurgeNamedParam
+				'FX B2 Param 2'
+				>,
+				<SurgeNamedParam
+				'FX B2 Param 3'
+				>,
+				<SurgeNamedParam
+				'FX B2 Param 4'
+				>,
+				<SurgeNamedParam
+				'FX B2 Param 5'
+				>,
+				<SurgeNamedParam
+				'FX B2 Param 6'
+				>,
+				<SurgeNamedParam
+				'FX B2 Param 7'
+				>,
+				<SurgeNamedParam
+				'FX B2 Param 8'
+				>,
+				<SurgeNamedParam
+				'FX B2 Param 9'
+				>,
+				<SurgeNamedParam
+				'FX B2 Param 10'
+				>,
+				<SurgeNamedParam
+				'FX B2 Param 11'
+				>,
+				<SurgeNamedParam
+				'FX B2 Param 12'
+				>
+			]
+		},
+		{
+			'type': <SurgeNamedParam
+			'FX S1 FX Type'
+			>,
+			'return_level': <SurgeNamedParam
+			'Send FX 1 Return'
+			>,
+			'p': [
+				<SurgeNamedParam
+				'FX S1 Param 1'
+				>,
+				<SurgeNamedParam
+				'FX S1 Param 2'
+				>,
+				<SurgeNamedParam
+				'FX S1 Param 3'
+				>,
+				<SurgeNamedParam
+				'FX S1 Param 4'
+				>,
+				<SurgeNamedParam
+				'FX S1 Param 5'
+				>,
+				<SurgeNamedParam
+				'FX S1 Param 6'
+				>,
+				<SurgeNamedParam
+				'FX S1 Param 7'
+				>,
+				<SurgeNamedParam
+				'FX S1 Param 8'
+				>,
+				<SurgeNamedParam
+				'FX S1 Param 9'
+				>,
+				<SurgeNamedParam
+				'FX S1 Param 10'
+				>,
+				<SurgeNamedParam
+				'FX S1 Param 11'
+				>,
+				<SurgeNamedParam
+				'FX S1 Param 12'
+				>
+			]
+		},
+		{
+			'type': <SurgeNamedParam
+			'FX S2 FX Type'
+			>,
+			'return_level': <SurgeNamedParam
+			'Send FX 2 Return'
+			>,
+			'p': [
+				<SurgeNamedParam
+				'FX S2 Param 1'
+				>,
+				<SurgeNamedParam
+				'FX S2 Param 2'
+				>,
+				<SurgeNamedParam
+				'FX S2 Param 3'
+				>,
+				<SurgeNamedParam
+				'FX S2 Param 4'
+				>,
+				<SurgeNamedParam
+				'FX S2 Param 5'
+				>,
+				<SurgeNamedParam
+				'FX S2 Param 6'
+				>,
+				<SurgeNamedParam
+				'FX S2 Param 7'
+				>,
+				<SurgeNamedParam
+				'FX S2 Param 8'
+				>,
+				<SurgeNamedParam
+				'FX S2 Param 9'
+				>,
+				<SurgeNamedParam
+				'FX S2 Param 10'
+				>,
+				<SurgeNamedParam
+				'FX S2 Param 11'
+				>,
+				<SurgeNamedParam
+				'FX S2 Param 12'
+				>
+			]
+		},
+		{
+			'type': <SurgeNamedParam
+			'FX G1 FX Type'
+			>,
+			'return_level': <SurgeNamedParam
+			'Send FX 1 Return'
+			>,
+			'p': [
+				<SurgeNamedParam
+				'FX G1 Param 1'
+				>,
+				<SurgeNamedParam
+				'FX G1 Param 2'
+				>,
+				<SurgeNamedParam
+				'FX G1 Param 3'
+				>,
+				<SurgeNamedParam
+				'FX G1 Param 4'
+				>,
+				<SurgeNamedParam
+				'FX G1 Param 5'
+				>,
+				<SurgeNamedParam
+				'FX G1 Param 6'
+				>,
+				<SurgeNamedParam
+				'FX G1 Param 7'
+				>,
+				<SurgeNamedParam
+				'FX G1 Param 8'
+				>,
+				<SurgeNamedParam
+				'FX G1 Param 9'
+				>,
+				<SurgeNamedParam
+				'FX G1 Param 10'
+				>,
+				<SurgeNamedParam
+				'FX G1 Param 11'
+				>,
+				<SurgeNamedParam
+				'FX G1 Param 12'
+				>
+			]
+		},
+		{
+			'type': <SurgeNamedParam
+			'FX G2 FX Type'
+			>,
+			'return_level': <SurgeNamedParam
+			'Send FX 1 Return'
+			>,
+			'p': [
+				<SurgeNamedParam
+				'FX G2 Param 1'
+				>,
+				<SurgeNamedParam
+				'FX G2 Param 2'
+				>,
+				<SurgeNamedParam
+				'FX G2 Param 3'
+				>,
+				<SurgeNamedParam
+				'FX G2 Param 4'
+				>,
+				<SurgeNamedParam
+				'FX G2 Param 5'
+				>,
+				<SurgeNamedParam
+				'FX G2 Param 6'
+				>,
+				<SurgeNamedParam
+				'FX G2 Param 7'
+				>,
+				<SurgeNamedParam
+				'FX G2 Param 8'
+				>,
+				<SurgeNamedParam
+				'FX G2 Param 9'
+				>,
+				<SurgeNamedParam
+				'FX G2 Param 10'
+				>,
+				<SurgeNamedParam
+				'FX G2 Param 11'
+				>,
+				<SurgeNamedParam
+				'FX G2 Param 12'
+				>
+			]
+		},
+		{
+			'type': <SurgeNamedParam
+			'FX A3 FX Type'
+			>,
+			'return_level': <SurgeNamedParam
+			'Send FX 1 Return'
+			>,
+			'p': [
+				<SurgeNamedParam
+				'FX A3 Param 1'
+				>,
+				<SurgeNamedParam
+				'FX A3 Param 2'
+				>,
+				<SurgeNamedParam
+				'FX A3 Param 3'
+				>,
+				<SurgeNamedParam
+				'FX A3 Param 4'
+				>,
+				<SurgeNamedParam
+				'FX A3 Param 5'
+				>,
+				<SurgeNamedParam
+				'FX A3 Param 6'
+				>,
+				<SurgeNamedParam
+				'FX A3 Param 7'
+				>,
+				<SurgeNamedParam
+				'FX A3 Param 8'
+				>,
+				<SurgeNamedParam
+				'FX A3 Param 9'
+				>,
+				<SurgeNamedParam
+				'FX A3 Param 10'
+				>,
+				<SurgeNamedParam
+				'FX A3 Param 11'
+				>,
+				<SurgeNamedParam
+				'FX A3 Param 12'
+				>
+			]
+		},
+		{
+			'type': <SurgeNamedParam
+			'FX A4 FX Type'
+			>,
+			'return_level': <SurgeNamedParam
+			'Send FX 1 Return'
+			>,
+			'p': [
+				<SurgeNamedParam
+				'FX A4 Param 1'
+				>,
+				<SurgeNamedParam
+				'FX A4 Param 2'
+				>,
+				<SurgeNamedParam
+				'FX A4 Param 3'
+				>,
+				<SurgeNamedParam
+				'FX A4 Param 4'
+				>,
+				<SurgeNamedParam
+				'FX A4 Param 5'
+				>,
+				<SurgeNamedParam
+				'FX A4 Param 6'
+				>,
+				<SurgeNamedParam
+				'FX A4 Param 7'
+				>,
+				<SurgeNamedParam
+				'FX A4 Param 8'
+				>,
+				<SurgeNamedParam
+				'FX A4 Param 9'
+				>,
+				<SurgeNamedParam
+				'FX A4 Param 10'
+				>,
+				<SurgeNamedParam
+				'FX A4 Param 11'
+				>,
+				<SurgeNamedParam
+				'FX A4 Param 12'
+				>
+			]
+		},
+		{
+			'type': <SurgeNamedParam
+			'FX B3 FX Type'
+			>,
+			'return_level': <SurgeNamedParam
+			'Send FX 1 Return'
+			>,
+			'p': [
+				<SurgeNamedParam
+				'FX B3 Param 1'
+				>,
+				<SurgeNamedParam
+				'FX B3 Param 2'
+				>,
+				<SurgeNamedParam
+				'FX B3 Param 3'
+				>,
+				<SurgeNamedParam
+				'FX B3 Param 4'
+				>,
+				<SurgeNamedParam
+				'FX B3 Param 5'
+				>,
+				<SurgeNamedParam
+				'FX B3 Param 6'
+				>,
+				<SurgeNamedParam
+				'FX B3 Param 7'
+				>,
+				<SurgeNamedParam
+				'FX B3 Param 8'
+				>,
+				<SurgeNamedParam
+				'FX B3 Param 9'
+				>,
+				<SurgeNamedParam
+				'FX B3 Param 10'
+				>,
+				<SurgeNamedParam
+				'FX B3 Param 11'
+				>,
+				<SurgeNamedParam
+				'FX B3 Param 12'
+				>
+			]
+		},
+		{
+			'type': <SurgeNamedParam
+			'FX B4 FX Type'
+			>,
+			'return_level': <SurgeNamedParam
+			'Send FX 1 Return'
+			>,
+			'p': [
+				<SurgeNamedParam
+				'FX B4 Param 1'
+				>,
+				<SurgeNamedParam
+				'FX B4 Param 2'
+				>,
+				<SurgeNamedParam
+				'FX B4 Param 3'
+				>,
+				<SurgeNamedParam
+				'FX B4 Param 4'
+				>,
+				<SurgeNamedParam
+				'FX B4 Param 5'
+				>,
+				<SurgeNamedParam
+				'FX B4 Param 6'
+				>,
+				<SurgeNamedParam
+				'FX B4 Param 7'
+				>,
+				<SurgeNamedParam
+				'FX B4 Param 8'
+				>,
+				<SurgeNamedParam
+				'FX B4 Param 9'
+				>,
+				<SurgeNamedParam
+				'FX B4 Param 10'
+				>,
+				<SurgeNamedParam
+				'FX B4 Param 11'
+				>,
+				<SurgeNamedParam
+				'FX B4 Param 12'
+				>
+			]
+		},
+		{
+			'type': <SurgeNamedParam
+			'FX S3 FX Type'
+			>,
+			'return_level': <SurgeNamedParam
+			'Send FX 3 Return'
+			>,
+			'p': [
+				<SurgeNamedParam
+				'FX S3 Param 1'
+				>,
+				<SurgeNamedParam
+				'FX S3 Param 2'
+				>,
+				<SurgeNamedParam
+				'FX S3 Param 3'
+				>,
+				<SurgeNamedParam
+				'FX S3 Param 4'
+				>,
+				<SurgeNamedParam
+				'FX S3 Param 5'
+				>,
+				<SurgeNamedParam
+				'FX S3 Param 6'
+				>,
+				<SurgeNamedParam
+				'FX S3 Param 7'
+				>,
+				<SurgeNamedParam
+				'FX S3 Param 8'
+				>,
+				<SurgeNamedParam
+				'FX S3 Param 9'
+				>,
+				<SurgeNamedParam
+				'FX S3 Param 10'
+				>,
+				<SurgeNamedParam
+				'FX S3 Param 11'
+				>,
+				<SurgeNamedParam
+				'FX S3 Param 12'
+				>
+			]
+		},
+		{
+			'type': <SurgeNamedParam
+			'FX S4 FX Type'
+			>,
+			'return_level': <SurgeNamedParam
+			'Send FX 4 Return'
+			>,
+			'p': [
+				<SurgeNamedParam
+				'FX S4 Param 1'
+				>,
+				<SurgeNamedParam
+				'FX S4 Param 2'
+				>,
+				<SurgeNamedParam
+				'FX S4 Param 3'
+				>,
+				<SurgeNamedParam
+				'FX S4 Param 4'
+				>,
+				<SurgeNamedParam
+				'FX S4 Param 5'
+				>,
+				<SurgeNamedParam
+				'FX S4 Param 6'
+				>,
+				<SurgeNamedParam
+				'FX S4 Param 7'
+				>,
+				<SurgeNamedParam
+				'FX S4 Param 8'
+				>,
+				<SurgeNamedParam
+				'FX S4 Param 9'
+				>,
+				<SurgeNamedParam
+				'FX S4 Param 10'
+				>,
+				<SurgeNamedParam
+				'FX S4 Param 11'
+				>,
+				<SurgeNamedParam
+				'FX S4 Param 12'
+				>
+			]
+		},
+		{
+			'type': <SurgeNamedParam
+			'FX G3 FX Type'
+			>,
+			'return_level': <SurgeNamedParam
+			'Send FX 1 Return'
+			>,
+			'p': [
+				<SurgeNamedParam
+				'FX G3 Param 1'
+				>,
+				<SurgeNamedParam
+				'FX G3 Param 2'
+				>,
+				<SurgeNamedParam
+				'FX G3 Param 3'
+				>,
+				<SurgeNamedParam
+				'FX G3 Param 4'
+				>,
+				<SurgeNamedParam
+				'FX G3 Param 5'
+				>,
+				<SurgeNamedParam
+				'FX G3 Param 6'
+				>,
+				<SurgeNamedParam
+				'FX G3 Param 7'
+				>,
+				<SurgeNamedParam
+				'FX G3 Param 8'
+				>,
+				<SurgeNamedParam
+				'FX G3 Param 9'
+				>,
+				<SurgeNamedParam
+				'FX G3 Param 10'
+				>,
+				<SurgeNamedParam
+				'FX G3 Param 11'
+				>,
+				<SurgeNamedParam
+				'FX G3 Param 12'
+				>
+			]
+		},
+		{
+			'type': <SurgeNamedParam
+			'FX G4 FX Type'
+			>,
+			'return_level': <SurgeNamedParam
+			'Send FX 1 Return'
+			>,
+			'p': [
+				<SurgeNamedParam
+				'FX G4 Param 1'
+				>,
+				<SurgeNamedParam
+				'FX G4 Param 2'
+				>,
+				<SurgeNamedParam
+				'FX G4 Param 3'
+				>,
+				<SurgeNamedParam
+				'FX G4 Param 4'
+				>,
+				<SurgeNamedParam
+				'FX G4 Param 5'
+				>,
+				<SurgeNamedParam
+				'FX G4 Param 6'
+				>,
+				<SurgeNamedParam
+				'FX G4 Param 7'
+				>,
+				<SurgeNamedParam
+				'FX G4 Param 8'
+				>,
+				<SurgeNamedParam
+				'FX G4 Param 9'
+				>,
+				<SurgeNamedParam
+				'FX G4 Param 10'
+				>,
+				<SurgeNamedParam
+				'FX G4 Param 11'
+				>,
+				<SurgeNamedParam
+				'FX G4 Param 12'
+				>
+			]
+		}
+	],
+	'scene_active': <SurgeNamedParam
+	'Active Scene'
+	>,
+	'scenemode': <SurgeNamedParam
+	'Scene Mode'
+	>,
+	'splitpoint': <SurgeNamedParam
+	'Split Point'
+	>,
+	'volume': <SurgeNamedParam
+	'Global Volume'
+	>,
+	'polylimit': <SurgeNamedParam
+	'Polyphony Limit'
+	>,
+	'fx_bypass': <SurgeNamedParam
+	'FX Chain Bypass'
+	>,
+	'fx_disable': <SurgeNamedParam
+	'FX Disable'
+	>,
+	'character': <SurgeNamedParam
+	'Character'
+	>
+}
