@@ -61,7 +61,7 @@ SURGE_INST.setParamVal(patch["scene"][0]["osc"][0]["p"][1], 0.0)
 SURGE_INST.setParamVal(patch["scene"][0]["osc"][0]["p"][2], 0.0)
 SURGE_INST.setParamVal(patch["scene"][0]["osc"][0]["p"][3], 0.5)
 
-refresh_patch(SURGE_INST, "../patches/analyser_test.fxp")
+refresh_patch(SURGE_INST, "../patches/analyser_output_test.fxp")
 
 
 osc_type: surgepy.SurgeNamedParamId = patch["scene"][0]["osc"][0]["type"]

@@ -10,9 +10,34 @@ This code will hopefully both generate and export .wav
     parameter values and their outputs for the AI model 
     to learn from to hopefully replicate as closely as 
     possible based off of what SurgeXT can currently do.
-    
+
     That's the plan anyways... (:
 '''
+
+# TODO:
+#       Bind release time to extend audio file duration from hold length
+#       Decide on maximum release time for training data (4 secs?)
+
+
+MAX_PATCHES = 10000
+
+OSC_ACC_FAC = [1, 2, 4, 5, 8, 10, 20, 25, 40, 50, 100, 200]
+OSC_ACC: int = 25  # OSC parameter value % increment - MUST MATCH FACTORS
+WIDTH_ACC_FAC = [1, 2, 4, 5, 10, 20, 25, 50, 100]
+WIDTH_ACC: int = 10  # Width Parameter % increment - MUST MATCH FACTORS
+
+SAMPLE_RATE = 48000
+
+# MIDI Setup
+NOTE = 36  # C2
+DURATION = 2  # Note length in seconds (+ release time?)
+VELOCITY = 100  # MIDI velocity
+
+
+#  Refreshes current patch data - parameter values won't update unless I do this shiz :/
+def refresh_patch(surge_inst: surgepy.SurgeSynthesizer, path: str):
+    surge_inst.savePatch(path=path)
+    surge_inst.loadPatch(path=path)
 
 
 def param_values(surge_inst, param):
@@ -27,65 +52,41 @@ def param_values(surge_inst, param):
     ]
 
 
-MAX_PATCHES = 1
-SAMPLE_RATE = 48000
-
-# Typical piano note range
-NOTE_RANGE = [21, 108]
-DURATION = 1  # seconds
-MAX_VELOCITY = 100  # MIDI velocity
-
 SURGE_INST = surgepy.createSurge(SAMPLE_RATE)  # Initialises SurgeXT instance
 
 # Set parameter values
 patch = SURGE_INST.getPatch()
 
 # PATCH SETUP HERE
-
 SURGE_INST.setParamVal(patch["scene"][0]["osc"][0]["type"], 8)  # Set OSC Type HERE!!
-SURGE_INST.setParamVal(patch["scene"][0]["osc"][0]["p"][0], 1.0)
-SURGE_INST.setParamVal(patch["scene"][0]["osc"][0]["p"][1], 0.0)
-SURGE_INST.setParamVal(patch["scene"][0]["osc"][0]["p"][2], 0.0)
-SURGE_INST.setParamVal(patch["scene"][0]["osc"][0]["p"][3], 0.5)
-
-# SURGE_INST.savePatch(path="../patches/temp.fxp")
-SURGE_INST.loadPatch(path="../patches/Sine Fall 1 Sec.fxp")
-# SURGE_INST.setParamVal(patch["scene"][0]["osc"][0]["p"][2], 1)
-
-osc_type: surgepy.SurgeNamedParamId = patch["scene"][0]["osc"][0]["type"]
-osc_param_1 = patch["scene"][0]["osc"][0]
-print(param_values(SURGE_INST, osc_type))
-for i in range(0, 7):
-    osc_params = patch["scene"][0]["osc"][0]["p"][i]
-    print(param_values(SURGE_INST, osc_params))
-
-print(f"sample rate: {SURGE_INST.getSampleRate()}, block size: {SURGE_INST.getBlockSize()}")
-print(f"one_sec: {(SURGE_INST.getSampleRate() / SURGE_INST.getBlockSize())} ")
-print(f"buffer: {SURGE_INST.createMultiBlock(int(round(DURATION * (SURGE_INST.getSampleRate() / SURGE_INST.getBlockSize()))))}")
-print(int(round((DURATION - 1) * (SURGE_INST.getSampleRate() / SURGE_INST.getBlockSize()))))
+refresh_patch(SURGE_INST, "../patches/temp.fxp")
 
 
 #  Export and render .wav files
-def render(nhv):
-    note, hold, velocity = nhv
+def render(sptwnhv):
+    saw, pulse, tri, width, note, hold, velocity = sptwnhv
+
+    SURGE_INST.setParamVal(patch["scene"][0]["osc"][0]["p"][0], saw)  # SAW
+    SURGE_INST.setParamVal(patch["scene"][0]["osc"][0]["p"][1], pulse)  # PULSE
+    SURGE_INST.setParamVal(patch["scene"][0]["osc"][0]["p"][2], tri)  # TRIANGLE
+    SURGE_INST.setParamVal(patch["scene"][0]["osc"][0]["p"][3], width)  # PULSE WIDTH
 
     one_sec = 2 * SURGE_INST.getSampleRate() / SURGE_INST.getBlockSize()
-    buffer = SURGE_INST.createMultiBlock(int(round(DURATION * one_sec)))
+    length = int(round(DURATION * one_sec))
+    buffer = SURGE_INST.createMultiBlock(length)
+    intermission = int(round((DURATION - hold) * one_sec))
 
-    chd = [note]
-    for note in chd:
-        SURGE_INST.playNote(0, note, velocity, 0)
-    SURGE_INST.processMultiBlock(buffer, 0, int(round(DURATION * one_sec)))
+    # for note in chd:
+    SURGE_INST.playNote(0, note, velocity, 0)
+    SURGE_INST.processMultiBlock(buffer, 0, intermission)
 
-    for note in chd:
-        SURGE_INST.releaseNote(0, note, 0)
-    SURGE_INST.processMultiBlock(buffer, int(round((DURATION - hold) * one_sec)))
-
-    # slug, buf.T, int(round(SURGE_INST.getSampleRate())))
+    # for note in chd:
+    SURGE_INST.releaseNote(0, note, 0)
+    SURGE_INST.processMultiBlock(buffer, intermission, length - intermission)
 
     buffer = (buffer * (2 ** 15 - 1)).astype("<h")  # Convert to little-endian 16 bit int.
     # WHY? float round
-    with wave.open("../output/note%d_velocity%d_hold%f.wav" % (note, velocity, DURATION), "w") as file:
+    with wave.open(f"../output/rng/{saw}_{pulse}_{tri}_{width}.wav", "w") as file:
         file.setnchannels(1)  # 2 channels
         file.setsampwidth(2)
         file.setframerate(SAMPLE_RATE)
@@ -93,18 +94,38 @@ def render(nhv):
 
 
 #  Creates MIDI notes to play with current SurgeXT patch
-def generate_patch_note_hold_and_velocity():
+def generate_random_patch_parameter_values():
     for count in range(MAX_PATCHES):
-        for note in range(NOTE_RANGE[0], NOTE_RANGE[1]):
-            hold = 1
-            velocity = random.randint(1, MAX_VELOCITY)
-            yield note, hold, velocity
+        saw_val, pulse_val, tri_val, pw_val = (
+            random.uniform(-1, 1),
+            random.uniform(-1, 1),
+            random.uniform(-1, 1),
+            random.uniform(0, 1)
+        )
+        yield saw_val, pulse_val, tri_val, pw_val, NOTE, (DURATION // 2), VELOCITY
 
 
 # Multithread processing - YIPPEE! (probably could be done differently IDK?)
-# core_num = multiprocessing.cpu_count()
-# print(f"{core_num} cores")
+core_num = multiprocessing.cpu_count()
+print(f"{core_num} cores")
 
-# process_pool = multiprocessing.Pool(core_num // 2)
-# r = list(tqdm(process_pool.imap(render, generate_patch_note_hold_and_velocity()), total=MAX_PATCHES))
-render([40, DURATION / 2, 100])
+process_pool = multiprocessing.Pool(core_num // 2)
+r = list(tqdm(process_pool.imap(render, generate_random_patch_parameter_values()), total=MAX_PATCHES))
+
+# Check if ACCURACY values are valid factors
+# if (OSC_ACC in OSC_ACC_FAC) and (WIDTH_ACC in WIDTH_ACC_FAC):
+#     print("GOOD!")
+#     osc_inc: int = (100 // OSC_ACC) + 1
+#     width_inc: int = (50 // WIDTH_ACC) + 1
+#
+#     for sawtooth in range(0, osc_inc):
+#         print(f"SAW {OSC_ACC * sawtooth}%")
+#
+#     for triangle in range(0, osc_inc):
+#         print(f"TRI {OSC_ACC * triangle}%")
+#
+#     for square in range(0, osc_inc):
+#         for width in range(0, width_inc):
+#             print(f"SQR {OSC_ACC * square}% - WIDTH {WIDTH_ACC * width}%")
+
+# render([40, DURATION / 2, 100])
